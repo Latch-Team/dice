@@ -6,8 +6,8 @@ Computing Dice's Coefficient is really easy. It goes like this:
 
 1. For `string1`, turn it into a set of trigrams `trigrams1`
 2. For `string2`, turn it into a set of trigrams `trigrams2`
-3. Calculate the size of the intersection of those two sets
-4. Multiply the intersection size by two and divide it by the sum of the sizes of `trigrams1` and `trigrams2`
+3. Calculate the size of the intersection of those two sets (number of triagrams)
+4. Multiply the intersection size by two and divide it by the sum of the sizes of `trigrams1` and `trigrams2` (in tiagrams)
 
 Example:
 
