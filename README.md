@@ -41,16 +41,16 @@ It shouldn't be too hard to get to ~50% of baseline with 0% degradation.
 
 This is what Ivo's Head of Engineering got:
 
-| index | length | Baseline | Baseline ms | fastDice | fastDice ms |
-| ----- | ------ | -------- | ----------- | -------- | ----------- |
-| 0 | 5 | 0.40 | 0.01 | ✅ | 0.00 (66.3%) 🚀🚀🚀 |
-| 1 | 61183 | 0.98 | 4.54 | ✅ | 0.82 (18.0%) 🚀🚀🚀🚀🚀🚀🚀🚀 |
-| 2 | 360606 | 0.99 | 15.04 | ✅ | 2.22 (14.7%) 🚀🚀🚀🚀🚀🚀🚀🚀 |
-| 3 | 145169 | 0.23 | 19.32 | ✅ (0.24: 3.0% off) | 2.60 (13.4%) 🚀🚀🚀🚀🚀🚀🚀🚀 |
+| (index) | length | Baseline | Baseline ms | fastDice              | fastDice ms                     |
+|---------|--------|----------|-------------|-----------------------|---------------------------------|
+| 0       | 5      | '0.40'   | '0.01'      | '✅'                  | '0.00 (90.1%)'                  |
+| 1       | 61183  | '0.98'   | '4.46'      | '✅'                  | '0.77 (17.3%) 🚀🚀🚀🚀🚀🚀🚀🚀' |
+| 2       | 360606 | '0.99'   | '14.40'     | '✅'                  | '2.13 (14.8%) 🚀🚀🚀🚀🚀🚀🚀🚀' |
+| 3       | 145169 | '0.23'   | '18.59'     | '✅ (0.24: 3.0% off)' | '2.54 (13.7%) 🚀🚀🚀🚀🚀🚀🚀🚀' |
 
 ```
-Total elapsed (baseline): 38.90ms
-Total elapsed (fastDice): 20.37ms
+Total elapsed (baseline): 37.45ms
+Total elapsed (fastDice): 5.44ms
 Runtime (fastDice): 14.5% of baseline 🚀🚀🚀🚀🚀🚀🚀🚀
 ✅ All test cases passed
 ```
