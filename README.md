@@ -18,12 +18,21 @@ For `string1 = "hello"` and `string2 = "help"`:
 3. Intersection: `{"hel"}` (size 1)
 4. Dice's Coefficient: `(2 * 1) / (3 + 2) = 0.4`
 
-`dice.js` contains a gold-standard baseline implementation of Dice's Coefficient. The only problem is that it's slow.
-`dice_fast.js` contains a hacky attempt to speed it up by approximating the answer. It succeeds in speeding up the result, but fails by returning an incorrect answer - the result is 14.1% off from the baseline on one of the test cases.
+This problem is available in two languages — pick whichever you prefer:
 
-Your job is to fix `dice_fast.js` - make the function _as fast as possible,_ while returning a result within _5% of the baseline._
+| Language | Directory | Baseline file | File to fix | Run benchmark |
+| -------- | --------- | ------------- | ----------- | ------------- |
+| JavaScript | `js/` | `dice_baseline.js` | `dice_fast.js` | `node js/bench.js` |
+| C++ | `c++/` | `dice_baseline.cpp` | `dice_fast.cpp` | `cd c++ && make run` |
 
-Run `node bench.js` to benchmark your solution. Get the `% of baseline` number as low as possible while not failing the tests.
+The baseline file contains a gold-standard implementation of Dice's Coefficient. The only problem is that it's slow.
+The `dice_fast` file contains a hacky attempt to speed it up by approximating the answer. It succeeds in speeding up the result, but fails by returning an incorrect answer - the result is 14.1% off from the baseline on one of the test cases.
+
+Your job is to fix `dice_fast` - make the function _as fast as possible,_ while returning a result within _5% of the baseline._
+
+Get the `% of baseline` number as low as possible while not failing the tests.
+
+Test data lives in `test_data.json` at the project root and is shared between both implementations. The C++ build downloads `nlohmann/json` on first run (one small `curl`), so you'll need network access the first time you run `make`.
 
 Feel free to google things and/or use a profiler, but don't use any AI.
 

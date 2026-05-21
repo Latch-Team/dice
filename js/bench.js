@@ -1,6 +1,7 @@
+const path = require("path");
 const { simpleDice } = require("./dice_baseline");
 const { fastDice } = require("./dice_fast");
-const { testCases } = require("./test_data");
+const { testCases } = require(path.join(__dirname, "..", "test_data.json"));
 
 const fns = [simpleDice, fastDice];
 
