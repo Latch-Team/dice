@@ -18,11 +18,12 @@ For `string1 = "hello"` and `string2 = "help"`:
 3. Intersection: `{"hel"}` (size 1)
 4. Dice's Coefficient: `(2 * 1) / (3 + 2) = 0.4`
 
-This problem is available in two languages — pick whichever you prefer:
+This problem is available in three languages — pick whichever you prefer:
 
 | Language | Directory | Baseline file | File to fix | Run benchmark |
 | -------- | --------- | ------------- | ----------- | ------------- |
 | JavaScript | `js/` | `dice_baseline.js` | `dice_fast.js` | `node js/bench.js` |
+| Python | `python/` | `dice_baseline.py` | `dice_fast.py` | `python3 python/bench.py` |
 | C++ | `c++/` | `dice_baseline.cpp` | `dice_fast.cpp` | `cd c++ && make run` |
 
 The baseline file contains a gold-standard implementation of Dice's Coefficient. The only problem is that it's slow.
