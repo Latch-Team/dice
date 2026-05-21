@@ -18,7 +18,7 @@ For `string1 = "hello"` and `string2 = "help"`:
 3. Intersection: `{"hel"}` (size 1)
 4. Dice's Coefficient: `(2 * 1) / (3 + 2) = 0.4`
 
-`dice.js` contains a gold-standard baseline implementation of Dice's Coefficient. The only problem is that it's slow.
+`dice_baseline.js` contains a gold-standard baseline implementation of Dice's Coefficient. The only problem is that it's slow.
 `dice_fast.js` contains a hacky attempt to speed it up by approximating the answer. It succeeds in speeding up the result, but fails by returning an incorrect answer - the result is 14.1% off from the baseline on one of the test cases.
 
 Your job is to fix `dice_fast.js` - make the function _as fast as possible,_ while returning a result within _5% of the baseline._
