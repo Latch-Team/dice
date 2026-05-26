@@ -1,4 +1,5 @@
-// Make this function faster!
+// Make this file faster!
+//
 function fastDice(str1, str2) {
   if (!str1 || !str2) return 0
 
@@ -9,11 +10,10 @@ function fastDice(str1, str2) {
 
   const grams1 = trigrams(str1)
   const grams2 = trigrams(str2)
-  const intersectSize = grams1.intersection(grams2).size
+  const intersectSize = intersection(grams1, grams2).size
   return (2 * intersectSize) / (grams1.size + grams2.size)
 }
 
-// You can make this function faster too, if it helps.
 function trigrams(str) {
   const grams = new Set()
   for (let i = 0; i < str.length - 2; i += 1) {
@@ -21,5 +21,18 @@ function trigrams(str) {
   }
   return grams
 }
+
+function intersection(set1, set2) {
+  const output = new Set()
+  for (const elem of set1) {
+    for (const compare of set2) {
+      if (elem === compare) {
+        output.add(elem)
+      }
+    }
+  }
+  return output
+}
+
 
 exports.fastDice = fastDice
