@@ -25,6 +25,8 @@ This problem is available in two languages — pick whichever you prefer:
 | JavaScript | `js/` | `dice_baseline.js` | `dice_fast.js` | `node js/bench.js` |
 | C++ | `c++/` | `dice_baseline.cpp` | `dice_fast.cpp` | `cd c++ && make run` |
 
+**Windows (C++):** Use `make -f Makefile.win run` instead of `make run`.
+
 The baseline file contains a gold-standard implementation of Dice's Coefficient. The only problem is that it's slow.
 The `dice_fast` file contains a hacky attempt to speed it up by approximating the answer. It succeeds in speeding up the result, but fails by returning an incorrect answer - the result is 14.1% off from the baseline on one of the test cases.
 
@@ -32,7 +34,7 @@ Your job is to fix `dice_fast` - make the function _as fast as possible,_ while 
 
 Get the `% of baseline` number as low as possible while not failing the tests.
 
-Test data lives in `test_data.json` at the project root and is shared between both implementations. The C++ build downloads `nlohmann/json` on first run (one small `curl`), so you'll need network access the first time you run `make`.
+Test data lives in `test_data.json` at the project root and is shared between both implementations. The C++ build downloads `nlohmann/json` on first run, so you'll need network access the first time you build.
 
 Feel free to google things and/or use a profiler, but don't use any AI.
 
